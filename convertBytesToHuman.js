@@ -18,9 +18,9 @@ function formatNumber(num) {
 
 export default function convertBytesToHuman(bytes) {
   if(
-    typeof bytes != "number" ||
-    bytes == Number.POSITIVE_INFINITY ||
-    bytes == Number.NEGATIVE_INFINITY ||
+    typeof bytes !== "number" ||
+    bytes === Number.POSITIVE_INFINITY ||
+    bytes === Number.NEGATIVE_INFINITY ||
     isNaN(bytes) ||
     bytes < 0
     )
