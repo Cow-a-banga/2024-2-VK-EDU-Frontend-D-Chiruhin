@@ -8,10 +8,6 @@ html {
     box-sizing: inherit;
 }
 
-a {
-    text-decoration: none;
-}
-
 .open-sans {
     font-family: "Open Sans", sans-serif;
 }
@@ -21,7 +17,7 @@ body {
     background-color: #fff;
     color: #333;
     font-size: 15px;
-    font-family: "Open Sans", sans-serif;
+    font-family: Helvetica, Arial, sans-serif;
     font-weight: 400;
     line-height: 20px;
 }
@@ -32,7 +28,6 @@ body {
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    position: relative;
 }
 
 .header {
@@ -45,16 +40,11 @@ body {
     background: linear-gradient(0deg, rgba(142,36,170,1) 0%, rgba(205,159,217,1) 170%); 
     display: flex;
     align-items: center;
-    padding: 20px;
+    padding: 20px 20px 5px 20px;
 }
 
-.title {
-    padding-left: 25px;
-    display: flex;
-    align-items: center;
-    flex-grow: 1;
-    font-size: 1.3em;
-    color: #fff;
+.header__search {
+    padding-right: 25px;
 }
 
 .account {
@@ -162,84 +152,4 @@ input {
 
 .form__attachment {
     color: #707070;
-}
-
-
-
-
-/* --------------------- Прорефакторить и вынести общие стили -------------------------------*/
-
-.profile-image {
-    width: 50px;
-    border-radius: 50px;
-}
-
-.chats {
-    flex-grow: 1;
-    background-color: #fff;  
-    padding: 80px 10px 20px 10px;
-    display: flex;
-    flex-direction: column;
-}
-
-
-.chat {
-    display: flex;
-    flex-direction: row;
-
-    background-color: #fff;
-    align-items: center;
-}
-
-.chat__underline {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-
-    padding-bottom: 20px;
-    border-bottom: 1px solid #e6e6e6;
-}
-
-.chat__image {
-    margin-right: 20px;
-}
-
-.chat__main {
-    flex-grow: 1;
-}
-
-.chat__side {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-}
-
-.chat__time {
-    color: #767676;
-}
-
-.chat__name {
-    color: #2a2a2a;
-}
-
-.chat__text {
-    color: #6c6c6c;
-}
-
-.status {
-    font-size: 18px;
-    color: #9837b0;
-    margin-left: 5px;
-}
-
-.float-button {
-    background-color: #f9d667;
-    border-radius: 30px;
-    font-size: 40px;
-    color: #72612e;
-    padding: 10px;
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
 }
