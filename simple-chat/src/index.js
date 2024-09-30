@@ -58,8 +58,8 @@ function scrollToTheBottom () {
 function handleSubmit (event) {
     event.preventDefault();
     if (input.value !== '') {
-        let time = new Date();
-        let message = {text: input.value, name: "Я", time: `${time.getHours()}:${time.getMinutes()}`};
+        let time = new Date().toLocaleTimeString([], {hour:"2-digit", minute:"2-digit"});
+        let message = {text: input.value, name: "Я", time: time};
         data = [...data, message];
         addMessageOnScreen(message);
         scrollToTheBottom();
