@@ -8,6 +8,7 @@ const messagesContainer = document.querySelector('.messages');
 let data = [];
 
 form.addEventListener('submit', handleSubmit);
+window.addEventListener('beforeunload', saveMessagesToStorage);
 
 loadMessagesFromStorage();
 scrollToTheBottom();
@@ -20,8 +21,7 @@ function loadMessagesFromStorage () {
     }
 }
 
-function addMessageToStorage (message) {
-    data = [...data, message];
+function saveMessagesToStorage () {
     localStorage.setItem(MESSAGES_STORAGE_KEY, JSON.stringify(data));
 }
 
@@ -60,7 +60,7 @@ function handleSubmit (event) {
     if (input.value !== '') {
         let time = new Date();
         let message = {text: input.value, name: "Я", time: `${time.getHours()}:${time.getMinutes()}`};
-        addMessageToStorage(message);
+        data = [...data, message];
         addMessageOnScreen(message);
         scrollToTheBottom();
         input.value = '';
