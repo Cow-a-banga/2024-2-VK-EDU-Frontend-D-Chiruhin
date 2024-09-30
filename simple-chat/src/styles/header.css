@@ -1,0 +1,23 @@
+.header {
+    position: fixed;
+    top: 0;
+    width: inherit;
+    z-index: 1;
+
+    background: rgb(142,36,170);
+    background: linear-gradient(0deg, rgba(142,36,170,1) 0%, rgba(205,159,217,1) 170%); 
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+.header__main {
+    font-size: 1.3rem;
+    color: #fff;
+    padding-left: 25px;
+    flex-grow: 1;
+}
+
+.header__right-icon {
+    padding-left: 25px;
+}
