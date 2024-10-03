@@ -1,0 +1,169 @@
+.messages {
+    flex-grow: 1;
+    background-color: #f5f5f5;  
+    padding: 80px 10px 60px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.form {
+    position: fixed;
+    bottom: 0;
+    width: inherit;
+    z-index: 1;
+
+    display: inline-block;
+    border: 1px solid rgba(25, 25, 25, 0.32);
+    display: flex;
+    height: 50px;
+    align-items: center;
+    padding: 0 10px;
+    background-color: #fff;
+}
+
+span.form__attachment {
+    color: #707070;
+}
+
+form {
+    flex-grow: 1;
+}
+
+input[type=submit] {
+    visibility: collapse;
+}
+
+input::placeholder {
+    color: #a1a1a1;
+}
+
+input {
+    font-size: 16px;
+    padding: 10px;
+    width: 100%;
+    border: 0;
+    outline: none;
+}
+
+.open-sans {
+    font-family: "Open Sans", sans-serif;
+}
+
+body {
+    margin: 0;
+    background-color: #fff;
+    color: #333;
+    font-size: 15px;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.content {
+    width: 100vw;
+    height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.material-icons { 
+    color: #fff; 
+    cursor: pointer;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+a {
+    text-decoration: none;
+}
+
+.account {
+    display: flex;
+    align-items: center;
+}
+
+.account__avatar {
+    font-size: 36px;
+    margin-right: 20px;
+}
+
+.account__name {    
+    font-size: 1.3rem;
+    color: #fff;
+}
+
+.account__last-time {
+    font-size: 0.8rem;
+    color: #cd9fd9;
+}
+
+.message {
+    background-color: #f3e5f5;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    padding: 10px 15px;
+    max-width: 85%;
+    align-self: flex-end;
+    border-radius: 20px;
+    word-wrap: break-word;
+}
+
+.message__bottom {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.message__text {
+    color: #1a181a;
+    font-size: 16px;
+}
+
+.message__time {
+    color: #706a71;
+}
+
+.message__status {
+    margin-left: 5px;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    width: inherit;
+    z-index: 1;
+
+    background: rgb(142,36,170);
+    background: linear-gradient(0deg, rgba(142,36,170,1) 0%, rgba(205,159,217,1) 170%); 
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    max-height: 64px;
+}
+
+.header__main {
+    font-size: 1.3rem;
+    color: #fff;
+    padding-left: 25px;
+    flex-grow: 1;
+}
+
+.header__right-icon {
+    padding-left: 25px;
+}
+
+.status {
+    font-size: 18px;
+    color: #9837b0;
+}
+
