@@ -117,13 +117,6 @@ a {
     overflow: hidden;
 }
 
-.text-cut {
-    display: inline-block;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
 .chat__main {
     flex-grow: 1;
 }
