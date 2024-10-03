@@ -9,6 +9,19 @@ import { addAllMessagesOnScreen, addMessageOnScreen } from '../scripts/addMessag
 import { scrollToTheBottom } from '../scripts/scrollToTheBottom';
 import { loadMessagesFromStorage, saveMessagesToStorage } from '../scripts/localStorage';
 
+const handleSubmit = (event) => {
+    event.preventDefault();
+    if (input.value !== '') {
+        let time = new Date().toLocaleTimeString([], {hour:"2-digit", minute:"2-digit"});
+        let message = {text: input.value, name: "Я", time};
+        data = [...data, message];
+        addMessageOnScreen(message, messagesContainer);
+        scrollToTheBottom();
+        input.value = '';
+    }
+    
+}
+
 const form = document.querySelector('form');
 const input = document.querySelector('input');
 const messagesContainer = document.querySelector('.messages');
@@ -21,16 +34,3 @@ window.addEventListener('beforeunload', () => {
 let data = loadMessagesFromStorage();
 addAllMessagesOnScreen(data, messagesContainer);
 scrollToTheBottom();
-
-function handleSubmit (event) {
-    event.preventDefault();
-    if (input.value !== '') {
-        let time = new Date().toLocaleTimeString([], {hour:"2-digit", minute:"2-digit"});
-        let message = {text: input.value, name: "Я", time: time};
-        data = [...data, message];
-        addMessageOnScreen(message, messagesContainer);
-        scrollToTheBottom();
-        input.value = '';
-    }
-    
-}
