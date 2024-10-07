@@ -108,15 +108,23 @@ a {
 }
 
 .message {
-    background-color: #f3e5f5;
     display: flex;
     flex-direction: column;
     margin-bottom: 10px;
     padding: 10px 15px;
     max-width: 85%;
-    align-self: flex-end;
     border-radius: 20px;
     word-wrap: break-word;
+}
+
+.message-right {
+    align-self: flex-end;
+    background-color: #f3e5f5;
+}
+
+.message-left {
+    align-self: flex-start;
+    background-color: #e1e1e1;
 }
 
 .message__bottom {
