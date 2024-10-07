@@ -7,7 +7,7 @@ export const loadMessagesFromStorage = () => {
     let data = json === null ? [] : JSON.parse(json);
 
     //Временно для демонстрации сообщений собеседника
-    if (data.length == 0 || data[0].name == 'Я') {
+    if (data.length === 0 || data[0].name === 'Я') {
         data = addInterlocutorMessages(data);
     }
     return data;
