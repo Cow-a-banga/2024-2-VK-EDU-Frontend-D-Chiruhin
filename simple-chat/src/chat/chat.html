@@ -4,31 +4,29 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Messenger</title>
-        <link href="index.css" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css?family=Material+Icons" rel="stylesheet">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-        <script src="index.js"></script>
     </head>
     <body>
         <div class="content">
             <div class="header">
-                <span class="material-icons">arrow_back</span>
-                <div class="account">
+                <a href="../index.html"><span class="material-icons">arrow_back</span></a>
+                <div class="header__main account">
                     <span class="material-icons account__avatar">account_circle</span>
                     <div class="account__info">
                         <div class="account__name open-sans">Дженнифер</div>
                         <div class="account__last-time open-sans">была 2 часа назад</div>
                     </div>
                 </div>
-                <span class="material-icons header__search">search</span>
-                <span class="material-icons header__more-vert">more_vert</span>
+                <span class="material-icons">search</span>
+                <span class="material-icons header__right-icon">more_vert</span>
             </div>
             <div class="messages"></div>
             <div class="form">
                 <form action="/">
-                    <input class="form__input" name="message-text" placeholder="Сообщение" type="text" autocomplete="off">
+                    <input name="message-text" placeholder="Сообщение" type="text" autocomplete="off">
                 </form>
                 <span class="material-icons form__attachment">attachment</span>
             </div>
