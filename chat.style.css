@@ -1,18 +1,19 @@
 .messages {
     flex-grow: 1;
     background-color: #f5f5f5;  
-    padding: 80px 10px 60px 10px;
+    padding: 10px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    
+
+    overflow-y: auto;
+}
+
+.messages > :first-child {
+    margin-top: auto;
 }
 
 .form {
-    position: fixed;
-    bottom: 0;
-    width: inherit;
-    z-index: 1;
-
     display: inline-block;
     border: 1px solid rgba(25, 25, 25, 0.32);
     display: flex;
@@ -46,6 +47,21 @@ input {
     outline: none;
 }
 
+@keyframes slideUp {
+    0% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.new-message {
+    animation: slideUp 0.5s ease-out forwards;
+}
+
 .open-sans {
     font-family: "Open Sans", sans-serif;
 }
@@ -71,6 +87,13 @@ body {
 .material-icons { 
     color: #fff; 
     cursor: pointer;
+}
+
+.crop-container {
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+    overflow: hidden;
 }
 
 html {
@@ -107,6 +130,14 @@ a {
     color: #cd9fd9;
 }
 
+.account__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+   border-radius: 50px;
+}
+
 .message {
     display: flex;
     flex-direction: column;
@@ -115,6 +146,8 @@ a {
     max-width: 85%;
     border-radius: 20px;
     word-wrap: break-word;
+
+    min-height: 60px;
 }
 
 .message-right {
@@ -146,11 +179,6 @@ a {
 }
 
 .header {
-    position: fixed;
-    top: 0;
-    width: inherit;
-    z-index: 1;
-
     background: rgb(142,36,170);
     background: linear-gradient(0deg, rgba(142,36,170,1) 0%, rgba(205,159,217,1) 170%); 
     display: flex;
