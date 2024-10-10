@@ -6,6 +6,8 @@
     max-width: 85%;
     border-radius: 20px;
     word-wrap: break-word;
+
+    min-height: 60px;
 }
 
 .message-right {

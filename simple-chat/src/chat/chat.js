@@ -16,7 +16,7 @@ const handleSubmit = (event) => {
         let message = {text: input.value, name: "Я", time};
         messages = [...messages, message];
         addMessageOnScreen(message, messagesContainer, true);
-        scrollToTheBottom();
+        scrollToTheBottom(messagesContainer);
         input.value = '';
     } 
 }
@@ -72,4 +72,4 @@ if (chat === undefined) {
 
 addAccountInfoOnScreen(chat.username, chat.image, accountContainer);
 addAllMessagesOnScreen(messages, messagesContainer);
-scrollToTheBottom();
+scrollToTheBottom(messagesContainer);

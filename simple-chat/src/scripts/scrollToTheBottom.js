@@ -1,3 +1,3 @@
-export const scrollToTheBottom = () => {
-    window.scrollTo({top: document.body.scrollHeight});
-}
+export const scrollToTheBottom = (container) => {
+    container.scrollTop = container.scrollHeight;
+};
