@@ -1,6 +1,6 @@
-export const addMessageOnScreen = (message, messagesContainer) => {
+export const addMessageOnScreen = (message, messagesContainer, isNew = false) => {
     let div_message = document.createElement("div");
-    div_message.className = `message ${message.name === 'Я' ? "message-right" : "message-left"}`;
+    div_message.className = `message ${isNew ? "new-message" : ""} ${message.name === 'Я' ? "message-right" : "message-left"}`;
 
     let div_text = document.createElement("div");
     div_text.className = "message__text";
