@@ -1,0 +1,27 @@
+.account {
+    display: flex;
+    align-items: center;
+}
+
+.account__avatar {
+    font-size: 36px;
+    margin-right: 20px;
+}
+
+.account__name {    
+    font-size: 1.3rem;
+    color: #fff;
+}
+
+.account__last-time {
+    font-size: 0.8rem;
+    color: #cd9fd9;
+}
+
+.account__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+   border-radius: 50px;
+}
