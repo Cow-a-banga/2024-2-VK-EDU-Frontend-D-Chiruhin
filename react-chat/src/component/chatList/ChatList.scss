@@ -1,0 +1,10 @@
+.chats {
+    flex-grow: 1;
+    background-color: #fff;  
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    
+    overflow-y: auto;
+    max-height: calc(100vh - 64px);
+}
