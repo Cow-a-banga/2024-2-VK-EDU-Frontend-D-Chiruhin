@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import './Chat.scss';
+import DoneAllIcon from '@mui/icons-material/DoneAll';
 
 const TEXT_MAX_LENGTH = 25;
 
@@ -46,7 +47,7 @@ export const Chat = (props) => {
                 </div>
                 <div className="chat__side">
                     <div className="chat__time">{props.chat.lastMessage.time}</div>
-                    {props.chat.lastMessage.name == 'Я' && <div className="material-icons status">done_all</div>}
+                    {props.chat.lastMessage.name == 'Я' && <DoneAllIcon className="material-icons status"/>}
                 </div>
             </div>
 

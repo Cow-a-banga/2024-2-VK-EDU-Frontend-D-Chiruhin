@@ -1,4 +1,5 @@
 import "./Message.scss";
+import DoneAllIcon from '@mui/icons-material/DoneAll';
 
 export const Message = (props) => {
     return (
@@ -6,7 +7,7 @@ export const Message = (props) => {
             <div className="message__text">{props.message.text}</div>
             <div className="message__bottom">
                 <div className="message__time">{props.message.time}</div>
-                { props.message.name === 'Я' && <span className="material-icons message__status status">done_all</span> }
+                { props.message.name === 'Я' && <DoneAllIcon className="material-icons message__status status"/> }
             </div>
         </div>
     );

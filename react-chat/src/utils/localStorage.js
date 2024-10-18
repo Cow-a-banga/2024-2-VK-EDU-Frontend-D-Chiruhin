@@ -38,7 +38,9 @@ export const loadMessagesFromStorage = (id) => {
 }
 
 export const saveMessagesToStorage = (id, data) => {
-    localStorage.setItem(getChatKey(id), JSON.stringify(data));
+    if (data !== undefined){
+        localStorage.setItem(getChatKey(id), JSON.stringify(data));
+    }
 }
 
 const addInterlocutorMessages = (id, data) => {

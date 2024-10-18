@@ -1,12 +1,14 @@
 import { useEffect, useRef, useState } from "react";
-import { ChatHeader, Header } from "../../component/header/Header";
+import { ChatHeader } from "../../component/header/Header";
 import "./ChatPage.scss";
 import { Message } from "../../component/message/Message";
 import { loadMessagesFromStorage, getChatById, saveMessagesToStorage } from "../../utils/localStorage";
+import AttachmentIcon from '@mui/icons-material/Attachment';
 
 export const ChatPage = (props) => {
 
     const [messages, setMessages] = useState([]);
+    const messagesRef = useRef();
     const [chat, setChat] = useState(null);
     const [input, setInput] = useState("");
     const [newMessageIndex, setNewMessageIndex] = useState(null);
@@ -27,13 +29,17 @@ export const ChatPage = (props) => {
     }, []);
 
     useEffect(() => {
-        console.log("out");
         if(loaded) {
-            console.log("in");
-            saveMessagesToStorage(props.id, messages);
+            messagesRef.current = messages;
         }
         scrollToBottom();
     }, [messages]);
+
+    useEffect(() => {
+        return () => {
+            saveMessagesToStorage(props.id, messagesRef.current);
+        }
+    }, []);
 
     const scrollToBottom = () => {
         if (messageContainerRef.current) {
@@ -73,7 +79,7 @@ export const ChatPage = (props) => {
                 <form action="/" onSubmit={handleSubmit}>
                     <input name="message-text" placeholder="Сообщение" type="text" autoComplete="off" value={input} onChange={x => setInput(x.target.value)}/>
                 </form>
-                <span className="material-icons form__attachment">attachment</span>
+                <AttachmentIcon className="material-icons form__attachment"/>
             </div>
         </div>
     );
