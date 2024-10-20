@@ -1,0 +1,52 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+a {
+  text-decoration: none;
+}
+
+svg.material-icons { 
+  color: #fff; 
+  cursor: pointer;
+}
+
+svg.status {
+  font-size: 18px;
+  color: #9837b0;
+}
+
+.open-sans {
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+  margin: 0;
+  background-color: #fff;
+  color: #333;
+  font-size: 15px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.content {
+  max-width: 850px;
+  height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.crop-container {
+  width: 50px;
+  height: 50px;
+  margin-right: 20px;
+  overflow: hidden;
+}
